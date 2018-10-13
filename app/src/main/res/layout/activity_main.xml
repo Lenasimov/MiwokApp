@@ -1,9 +1,10 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tan_background"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,38 +12,24 @@
         style="@style/CategoryStyle"
         android:background="@color/category_numbers"
         android:text="@string/category_numbers"
-        app:layout_constraintBottom_toTopOf="@id/family"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_weight="1" />
 
     <TextView
         android:id="@+id/family"
         style="@style/CategoryStyle"
         android:background="@color/category_family"
-        android:text="@string/category_family"
-        app:layout_constraintBottom_toTopOf="@id/colors"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numbers" />
+        android:text="@string/category_family" />
 
     <TextView
         android:id="@+id/colors"
         style="@style/CategoryStyle"
         android:background="@color/category_colors"
-        android:text="@string/category_colors"
-        app:layout_constraintBottom_toTopOf="@id/phrases"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/family" />
+        android:text="@string/category_colors" />
 
     <TextView
         android:id="@+id/phrases"
         style="@style/CategoryStyle"
         android:background="@color/category_phrases"
-        android:text="@string/category_phrases"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/colors" />
+        android:text="@string/category_phrases" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
