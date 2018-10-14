@@ -60,7 +60,7 @@ public class FamilyActivity extends BaseActivity {
 
                 mMediaPlayer.start();
 
-//                mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
+                mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
             }
         });
 

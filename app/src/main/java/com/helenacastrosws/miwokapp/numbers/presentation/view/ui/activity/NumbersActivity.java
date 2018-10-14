@@ -58,7 +58,7 @@ public class NumbersActivity extends BaseActivity {
                 mMediaPlayer = MediaPlayer.create(NumbersActivity.this, word.getAudioResourceId());
                 mMediaPlayer.start();
 
-//                mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
+                mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
             }
         });
 

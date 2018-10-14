@@ -58,7 +58,7 @@ public class ColorsActivity extends BaseActivity {
 
                 mMediaPlayer.start();
 
-//                mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
+                mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
             }
         });
 
