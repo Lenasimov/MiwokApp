@@ -1,6 +1,7 @@
 package com.helenacastrosws.miwokapp.word.presentation.view.ui.adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
@@ -48,7 +49,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView defaultTrans = listItemView.findViewById(R.id.tv_default_trans);
         defaultTrans.setText(currentWordPosition.getDefaultTranslation());
 
-        ImageView imageView = listItemView.findViewById(R.id.image_view);
+        ImageView imageView = listItemView.findViewById(R.id.imgv_icon);
         if(currentWordPosition.hasImage()) {
             imageView.setImageResource(currentWordPosition.getImageResourceId());
             imageView.setVisibility(View.VISIBLE);
