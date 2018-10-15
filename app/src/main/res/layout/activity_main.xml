@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tan_background"
+    android:drawSelectorOnTop="true"
     android:orientation="vertical"
     tools:context=".main.presentation.view.ui.activity.MainActivity">
 
