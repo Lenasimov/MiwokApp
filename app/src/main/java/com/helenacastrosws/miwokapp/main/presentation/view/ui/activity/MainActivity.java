@@ -1,34 +1,23 @@
 package com.helenacastrosws.miwokapp.main.presentation.view.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import com.helenacastrosws.miwokapp.colors.presentation.view.ui.activity.ColorsActivity;
-import com.helenacastrosws.miwokapp.family.presentation.view.ui.activity.FamilyActivity;
-import com.helenacastrosws.miwokapp.numbers.presentation.view.ui.activity.NumbersActivity;
-import com.helenacastrosws.miwokapp.phrases.presentation.view.ui.activity.PhrasesActivity;
 import com.helenacastrosws.miwokapp.R;
+import com.helenacastrosws.miwokapp.main.presentation.view.ui.adapter.CategoryFragmentPagerAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.numbers)
-    TextView numbers;
+    @BindView(R.id.viewpager)
+    ViewPager viewPager;
 
-    @BindView(R.id.family)
-    TextView family;
-
-    @BindView(R.id.colors)
-    TextView colors;
-
-    @BindView(R.id.phrases)
-    TextView phrases;
+    @BindView(R.id.tablayout)
+    TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,36 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        numbers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
-                startActivity(numbersIntent);
-            }
-        });
-        family.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
-                startActivity(familyIntent);
-            }
-        });
-
-        colors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
-                startActivity(colorsIntent);
-            }
-        });
-
-        phrases.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
-                startActivity(phrasesIntent);
-            }
-        });
+        viewPager.setAdapter(new CategoryFragmentPagerAdapter(MainActivity.this, getSupportFragmentManager()));
+        tabLayout.setupWithViewPager(viewPager);
     }
 
 }
