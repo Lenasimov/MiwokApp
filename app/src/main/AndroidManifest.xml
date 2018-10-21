@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.presentation.view.ui.activity.MainActivity">
+        <activity android:name=".main.ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,36 +19,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".numbers.presentation.view.ui.activity.NumbersActivity"
+            android:name=".numbers.ui.activity.NumbersActivity"
             android:label="@string/category_numbers"
-            android:parentActivityName=".main.presentation.view.ui.activity.MainActivity">
+            android:parentActivityName=".main.ui.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".main.presentation.view.ui.activity.MainActivity" />
+                android:value=".main.ui.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".family.presentation.view.ui.activity.FamilyActivity"
+            android:name=".family.ui.activity.FamilyActivity"
             android:label="@string/category_family"
-            android:parentActivityName=".main.presentation.view.ui.activity.MainActivity">
+            android:parentActivityName=".main.ui.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".main.presentation.view.ui.activity.MainActivity" />
+                android:value=".main.ui.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".colors.presentation.view.ui.activity.ColorsActivity"
+            android:name=".colors.ui.activity.ColorsActivity"
             android:label="@string/category_colors"
-            android:parentActivityName=".main.presentation.view.ui.activity.MainActivity">
+            android:parentActivityName=".main.ui.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".main.presentation.view.ui.activity.MainActivity" />
+                android:value=".main.ui.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".phrases.presentation.view.ui.activity.PhrasesActivity"
+            android:name=".phrases.ui.activity.PhrasesActivity"
             android:label="@string/category_phrases"
-            android:parentActivityName=".main.presentation.view.ui.activity.MainActivity">
+            android:parentActivityName=".main.ui.activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".main.presentation.view.ui.activity.MainActivity" />
+                android:value=".main.ui.activity.MainActivity" />
         </activity>
     </application>
 
